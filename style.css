@@ -21,3 +21,30 @@
 .id-card>img{border:0;outline:none;box-shadow:none;background:transparent}
 @media(max-width:1000px){.hero{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);min-height:720px}.portrait img{max-height:650px}}
 @media(max-width:650px){.hero{min-height:auto;gap:0}.portrait{width:100%;max-width:480px;margin:25px auto 20px;align-self:center}.portrait img{width:100%;height:auto;max-height:none}}
+
+/* Badge suspendu animé : section About. */
+.badge-stage{width:100%;max-width:410px;justify-self:center;padding:105px 20px 24px;perspective:1100px}
+.creator-badge{position:relative;width:100%;transform-origin:50% -85px;animation:badge-sway 7s ease-in-out infinite;isolation:isolate}
+.badge-lanyard{position:absolute;bottom:calc(100% - 8px);left:50%;width:37px;height:105px;transform:translateX(-50%);background:linear-gradient(90deg,#a493d0,#7061ac);border-inline:2px solid #bcb0dc;overflow:hidden;z-index:-1}
+.badge-lanyard span{display:block;writing-mode:vertical-rl;white-space:nowrap;font:9px/33px 'Courier New',monospace;color:#fff;letter-spacing:2px;margin:8px 0}
+.badge-clip{position:absolute;top:-25px;left:50%;transform:translateX(-50%);width:27px;height:45px;border-radius:5px;background:linear-gradient(90deg,#aaa9a5,#e4e4df 45%,#b0b0ab);border:2px solid #a3a39f;box-shadow:0 2px 2px #342b3825;z-index:3}
+.badge-clip::after{content:'';position:absolute;inset:5px;border:1px solid #f5f5ef;border-radius:2px;background:#d9d9d5}
+.badge-shell{overflow:hidden;border-radius:25px;background:linear-gradient(145deg,#fffbfa,#f0e9f6);border:1px solid #fff;box-shadow:0 24px 55px #51406b20}
+.badge-header{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 25px;background:linear-gradient(115deg,#e9b09e,#bd879c);color:#fff;font:700 10px/1.4 'Courier New',monospace;letter-spacing:3px}
+.badge-star{font-size:23px;font-weight:400;letter-spacing:0}
+.badge-body{padding:27px 24px 22px;text-align:center}
+.badge-photo{position:relative;width:64%;aspect-ratio:1 / 1.15;margin:0 auto 24px;background:linear-gradient(140deg,#f3e8f3,#e2d8f0);border-radius:17px;isolation:isolate}
+.badge-orbit{position:absolute;width:82%;aspect-ratio:1;border:1px solid #9c85c5;border-radius:50%;top:11%;left:9%;z-index:-1}
+.badge-photo img{width:100%;height:100%;object-fit:contain;object-position:center bottom;position:relative;border-radius:0}
+.badge-sticker{position:absolute;bottom:8%;right:-23%;width:77px;height:77px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:linear-gradient(135deg,#ffe5d0,#ebc0b1);font:11px/1.45 'Courier New',monospace;letter-spacing:1px;color:var(--ink);transform:rotate(12deg);box-shadow:0 0 0 2px #fff6}
+.badge-body h3{font-size:27px;font-weight:500;letter-spacing:-1.2px;margin:12px 0 9px;line-height:1.15}
+.badge-role{font-size:12px;line-height:1.6;margin:0;color:var(--muted)}
+.badge-info{border-top:1px solid var(--line);margin:25px 0 20px;padding-top:17px;text-align:left;display:grid;gap:12px;font:8px/1.6 'Courier New',monospace;text-transform:uppercase;letter-spacing:.5px}
+.badge-info div{display:grid;grid-template-columns:1fr 1.3fr;gap:12px}.badge-info dt{color:var(--muted)}.badge-info dd{margin:0;color:var(--ink)}
+.badge-footer{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.badge-barcode{width:100px;height:27px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 4px,var(--ink) 4px 5px,transparent 5px 8px,var(--ink) 8px 11px,transparent 11px 13px,var(--ink) 13px 14px,transparent 14px 17px);opacity:.9}
+.badge-signature{font:italic 34px/1 Georgia,serif;color:var(--violet);letter-spacing:-2px}
+.creator-badge:hover{animation-play-state:paused}
+@keyframes badge-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@media(max-width:650px){.badge-stage{max-width:350px;padding:100px 16px 15px}.badge-body{padding:24px 20px 20px}.badge-body h3{font-size:25px}.badge-sticker{width:67px;height:67px;font-size:10px}.badge-header{height:65px}.badge-info{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.creator-badge{animation:none;transform:none}}
