@@ -48,3 +48,24 @@
 @keyframes badge-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
 @media(max-width:650px){.badge-stage{max-width:350px;padding:100px 16px 15px}.badge-body{padding:24px 20px 20px}.badge-body h3{font-size:25px}.badge-sticker{width:67px;height:67px;font-size:10px}.badge-header{height:65px}.badge-info{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.creator-badge{animation:none;transform:none}}
+
+/* Ghada Media Pass : identité propre et deux faces. */
+.badge-shell{overflow:visible;border:0;border-radius:0;background:none;box-shadow:none;perspective:1200px}
+.badge-rotor{display:grid;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.2,.7,.2,1)}
+.creator-badge.is-flipped .badge-rotor{transform:rotateY(180deg)}
+.badge-face{grid-area:1/1;min-width:0;overflow:hidden;border-radius:9px 26px 9px 26px;border:1px solid #fff;background:linear-gradient(145deg,#fffbfa,#eee7f4);box-shadow:0 24px 55px #51406b20;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.badge-back{transform:rotateY(180deg);background:linear-gradient(150deg,#f7f2fb,#e4dced)}
+.badge-header{background:var(--violet);height:66px;border-bottom:5px solid var(--peach);letter-spacing:2px}
+.badge-star{font-size:22px}.badge-sticker{border-radius:9px 22px 9px 22px;font-size:9px}
+.badge-lanyard{background:linear-gradient(90deg,#342b38,#615365);border-color:#827184}
+.badge-photo{width:68%;border-radius:5px 22px 5px 22px}.badge-orbit{border-radius:18px;transform:rotate(12deg)}
+.pass-code{font:9px/1.7 'Courier New',monospace;letter-spacing:1px;text-align:left;color:var(--violet)}.pass-mark{font-size:33px;line-height:1;color:inherit}
+.pass-back-body{padding:22px 24px;color:var(--ink)}.pass-back-body>.label{font-size:8px;letter-spacing:1px;color:var(--violet)}
+.pass-back-body h3{font-size:34px;line-height:1.08;margin:14px 0 18px;letter-spacing:-1px}
+.pass-skills{margin:0}.pass-skills>div{padding:12px 0;border-top:1px solid var(--line)}
+.pass-skills dt{font-size:14px;font-weight:600;line-height:1.4;display:flex;gap:12px;align-items:center}.pass-skills dt span{color:var(--violet);font:10px 'Courier New',monospace}.pass-skills dd{margin:6px 0 0 27px;font-size:11px;line-height:1.55;color:#615365}
+.pass-tools{font-size:10px;line-height:1.6;border-top:1px solid var(--line);padding-top:15px;margin:6px 0 18px;color:#615365}.pass-bottom{display:flex;justify-content:space-between;gap:15px;font:9px 'Courier New',monospace;letter-spacing:1px;color:var(--violet)}
+.badge-toggle{display:block;position:relative;margin:32px auto 0;border:1px solid #7061ac70;border-radius:30px;background:#ffffff90;color:var(--violet);padding:11px 21px;font:12px Arial,sans-serif;cursor:pointer}.badge-toggle:hover{background:#e4dced}.badge-toggle:focus-visible{outline:3px solid var(--violet);outline-offset:4px}.badge-hint{text-align:center;font-size:10px;margin:9px 0 0}
+.creator-badge.is-flipped{animation-play-state:paused}
+@media(max-width:650px){.pass-back-body{padding:20px}.pass-back-body h3{font-size:29px}.pass-skills>div{padding:10px 0}.pass-skills dt{font-size:13px}.pass-skills dd{font-size:11px}.badge-toggle{margin-top:28px}}
+@media(prefers-reduced-motion:reduce){.badge-rotor{transition:none}.creator-badge{animation:none}}
