@@ -80,3 +80,10 @@
 .footer-brand .brand-logo{width:44px;height:44px}
 @media(max-width:1000px){.navigation{grid-template-columns:38px 1fr;gap:12px;padding-block:15px}.navigation .identity{grid-column:2;grid-row:1}.navigation nav{grid-column:1/-1;grid-row:2;justify-self:center}.navigation>.social{grid-column:1;grid-row:1}.brand-logo{width:54px;height:54px}}
 @media(max-width:650px){.navigation nav{width:100%;justify-self:stretch}.navigation .identity strong{font-size:12px}.navigation .identity{gap:10px}.brand-logo{width:48px;height:48px}}
+
+/* En-tête : logo et nom à gauche, navigation centrée, sans flèche. */
+.navigation{grid-template-columns:minmax(250px,1fr) auto minmax(250px,1fr)}
+.navigation .identity{grid-column:1;grid-row:1;justify-self:start}
+.navigation nav{grid-column:2;grid-row:1}
+@media(max-width:1100px){.navigation{grid-template-columns:1fr;gap:14px;padding-block:18px}.navigation .identity{grid-column:1;grid-row:1;justify-self:start}.navigation nav{grid-column:1;grid-row:2;justify-self:center}}
+@media(max-width:650px){.navigation nav{justify-self:stretch;width:100%}.navigation .identity strong{font-size:13px}}
