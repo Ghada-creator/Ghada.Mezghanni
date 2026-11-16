@@ -146,3 +146,7 @@
 .experience-bubble .bubble-front{background:linear-gradient(145deg,#fffbfa,#eee7f4)}
 .experience-bubble .bubble-back{background:linear-gradient(150deg,#f7f2fb,#e4dced)}
 .experience-bubble .bubble-face{border-color:#fff;box-shadow:0 24px 55px #51406b20}
+
+/* Carreaux aux coins du badge, couleurs et retournement conservés. */
+.experience-bubble,.experience-bubble .bubble-face{border-radius:9px 26px 9px 26px}
+.experience-bubble .bubble-role{color:#000}
