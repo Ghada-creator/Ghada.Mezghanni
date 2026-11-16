@@ -139,3 +139,10 @@
 @media(max-width:650px){.experience-bubbles{grid-template-columns:1fr;gap:28px;margin-top:30px;justify-items:center}.experience-bubble{width:100%;max-width:370px}.bubble-title{font-size:30px}.bubble-face{gap:15px;padding:13%}.bubble-back{gap:12px}.bubble-description{font-size:12px;line-height:1.6}}
 @media(max-width:360px){.bubble-title{font-size:25px}.bubble-face{gap:10px}.bubble-role{font-size:11px}.bubble-description{font-size:10px}.bubble-tags{font-size:8px}.bubble-prompt{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.bubble-rotor{transition:none}}
+
+/* Bulles alignées, palette identique au Media Pass. */
+.experience-bubbles{align-items:start}
+.experience-bubble:nth-child(2){margin-top:0}
+.experience-bubble .bubble-front{background:linear-gradient(145deg,#fffbfa,#eee7f4)}
+.experience-bubble .bubble-back{background:linear-gradient(150deg,#f7f2fb,#e4dced)}
+.experience-bubble .bubble-face{border-color:#fff;box-shadow:0 24px 55px #51406b20}
