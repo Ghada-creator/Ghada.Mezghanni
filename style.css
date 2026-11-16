@@ -115,3 +115,27 @@
 .experience-tags{display:flex;flex-wrap:wrap;gap:8px 0;list-style:none;padding:0;margin:22px 0 0;font-size:10px;line-height:1.6;color:#615365}
 .experience-tags li+li::before{content:'·';padding:0 12px;color:var(--coral)}
 @media(max-width:650px){.experience-list{margin-top:30px}.experience-row{grid-template-columns:1fr;gap:25px;padding:32px 0}.experience-company h3{font-size:34px}.experience-detail>p:not(.experience-role){font-size:14px}.experience-tags{font-size:10px;margin-top:16px}}
+
+/* Expériences : bulles rondes interactives. */
+.experience-bubbles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:start;margin-top:55px;padding:10px 0 35px}
+.experience-bubble{appearance:none;display:block;width:100%;aspect-ratio:1;border:0;padding:0;border-radius:50%;background:none;font-family:inherit;color:var(--ink);cursor:pointer;perspective:1200px;text-align:center;min-width:0;-webkit-tap-highlight-color:transparent}
+.experience-bubble:focus-visible{outline:3px solid var(--violet);outline-offset:8px}
+.bubble-rotor{display:grid;width:100%;height:100%;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.2,.7,.2,1)}
+.experience-bubble.is-flipped .bubble-rotor{transform:rotateY(180deg)}
+.bubble-face{grid-area:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:14%;border-radius:50%;border:1px solid #fff;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:inset 0 2px 12px #ffffffa0,0 16px 40px #7061ac13;min-width:0}
+.bubble-front{background:radial-gradient(circle at 28% 20%,#fffafc,#e4dced 75%)}
+.bubble-2 .bubble-front{background:radial-gradient(circle at 28% 20%,#fff9ef,#e9c0af 90%)}
+.bubble-3 .bubble-front{background:radial-gradient(circle at 28% 20%,#ffffff,#e5e1f3 85%)}
+.bubble-back{transform:rotateY(180deg);background:radial-gradient(circle at 25% 20%,#fdf9ff,#e1d8ee);gap:13px}
+.bubble-2 .bubble-back{background:radial-gradient(circle at 25% 20%,#fff9f4,#efcebf)}
+.bubble-face>.label{font-size:9px;letter-spacing:1px;color:var(--violet);line-height:1.6}
+.bubble-title{font-size:clamp(22px,2.5vw,35px);letter-spacing:-1.1px;line-height:1.15}
+.bubble-prompt{font-size:10px;color:var(--violet);line-height:1.5}
+.bubble-role{font-size:12px;font-weight:600;line-height:1.4;color:var(--violet)}
+.bubble-description{font-size:12px;line-height:1.65;color:#615365}
+.bubble-tags{font-size:9px;line-height:1.6;color:#615365;max-width:95%}
+@media(min-width:1050px){.experience-bubble:nth-child(2){margin-top:40px}}
+@media(min-width:651px) and (max-width:1049px){.experience-bubbles{grid-template-columns:repeat(2,minmax(0,1fr));max-width:800px;margin-inline:auto}.experience-bubble:last-child{grid-column:1/-1;width:calc((100% - 28px)/2);justify-self:center}.bubble-title{font-size:28px}}
+@media(max-width:650px){.experience-bubbles{grid-template-columns:1fr;gap:28px;margin-top:30px;justify-items:center}.experience-bubble{width:100%;max-width:370px}.bubble-title{font-size:30px}.bubble-face{gap:15px;padding:13%}.bubble-back{gap:12px}.bubble-description{font-size:12px;line-height:1.6}}
+@media(max-width:360px){.bubble-title{font-size:25px}.bubble-face{gap:10px}.bubble-role{font-size:11px}.bubble-description{font-size:10px}.bubble-tags{font-size:8px}.bubble-prompt{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.bubble-rotor{transition:none}}
