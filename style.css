@@ -12,3 +12,12 @@
 .portrait img{display:block;width:100%;height:auto;max-height:650px;object-fit:contain;object-position:center bottom;border-radius:0;background:transparent}
 .id-card>img{display:block;width:100%;height:280px;object-fit:contain;object-position:center bottom;border-radius:0;background:transparent}
 @media(max-width:650px){.portrait{width:100%;max-width:400px;margin:30px auto 20px;align-self:center}.portrait img{height:auto;max-height:480px}}
+
+/* Portrait agrandi, sans contour ni cadre. */
+.hero{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,.55fr);min-height:840px;gap:12px}
+.portrait{width:100%;margin:70px 0 55px;align-self:end;min-width:0}
+.portrait::before,.portrait::after{content:none;display:none}
+.portrait img{width:100%;height:auto;max-height:760px;object-fit:contain;border:0;border-radius:0;outline:none;box-shadow:none;background:transparent}
+.id-card>img{border:0;outline:none;box-shadow:none;background:transparent}
+@media(max-width:1000px){.hero{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);min-height:720px}.portrait img{max-height:650px}}
+@media(max-width:650px){.hero{min-height:auto;gap:0}.portrait{width:100%;max-width:480px;margin:25px auto 20px;align-self:center}.portrait img{width:100%;height:auto;max-height:none}}
