@@ -150,3 +150,9 @@
 /* Carreaux aux coins du badge, couleurs et retournement conservés. */
 .experience-bubble,.experience-bubble .bubble-face{border-radius:9px 26px 9px 26px}
 .experience-bubble .bubble-role{color:#000}
+
+/* Titres de poste : même typographie que Social media au recto. */
+.experience-bubble .bubble-role{font-family:inherit;font-size:clamp(22px,2.5vw,35px);font-weight:400;font-style:normal;line-height:1.15;letter-spacing:-1.1px;color:#000}
+@media(min-width:651px) and (max-width:1049px){.experience-bubble .bubble-role{font-size:28px}}
+@media(max-width:650px){.experience-bubble .bubble-role{font-size:30px}}
+@media(max-width:360px){.experience-bubble .bubble-role{font-size:25px}}
