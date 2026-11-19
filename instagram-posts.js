@@ -9,7 +9,7 @@ const instagramPosts = [
   },
   {
     "url": "https://www.instagram.com/reels/DMFOfTcSWWp",
-    "brand": "Give Way for Emergency Vehicles, Immediatey"
+    "brand": "Give Way for Emergency Vehicles, Immediately"
   },
   {
     "url": "https://www.instagram.com/p/DePGP6kjf_B/?dmpr=dWdvZ283ZWZpdzBw",
