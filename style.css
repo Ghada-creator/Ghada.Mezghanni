@@ -156,3 +156,43 @@
 @media(min-width:651px) and (max-width:1049px){.experience-bubble .bubble-role{font-size:28px}}
 @media(max-width:650px){.experience-bubble .bubble-role{font-size:30px}}
 @media(max-width:360px){.experience-bubble .bubble-role{font-size:25px}}
+
+/* Taille strictement identique pour les titres au recto et au verso. */
+.experience-bubble{--experience-title-size:clamp(22px,2.5vw,35px)}
+.experience-bubble .bubble-title,.experience-bubble .bubble-role{font-family:Arial,Helvetica,sans-serif;font-size:var(--experience-title-size);font-weight:400;font-style:normal;line-height:1.15;letter-spacing:-1.1px}
+.experience-bubble .bubble-role{color:#000}
+@media(min-width:651px) and (max-width:1049px){.experience-bubble{--experience-title-size:28px}}
+@media(max-width:650px){.experience-bubble{--experience-title-size:30px}}
+@media(max-width:360px){.experience-bubble{--experience-title-size:25px}}
+
+/* Publications Instagram : galerie flottante. */
+.instagram-section{overflow:hidden;padding-bottom:65px}
+.ig-carousel{max-width:1440px;margin:0 auto}
+.ig-stage{position:relative;min-height:620px;margin:20px auto 0;perspective:1400px;isolation:isolate}
+.ig-card{position:absolute;top:38px;left:50%;width:340px;max-width:78vw;transform:translateX(-50%);border:1px solid #fff;border-radius:25px;background:linear-gradient(145deg,#fffdfceF,#eee7f4f5);padding:18px;box-shadow:0 20px 50px #51406b1a;transition:transform .65s cubic-bezier(.2,.7,.2,1),opacity .5s;transform-origin:center;opacity:0;visibility:hidden}
+.ig-card[data-position="0"]{z-index:5;opacity:1;visibility:visible;transform:translateX(-50%) translateY(0) scale(1)}
+.ig-card[data-position="-1"]{z-index:4;opacity:.88;visibility:visible;transform:translateX(calc(-50% - 255px)) translateY(32px) rotate(-7deg) scale(.85)}
+.ig-card[data-position="1"]{z-index:4;opacity:.88;visibility:visible;transform:translateX(calc(-50% + 255px)) translateY(32px) rotate(7deg) scale(.85)}
+.ig-card[data-position="-2"]{z-index:3;opacity:.62;visibility:visible;transform:translateX(calc(-50% - 430px)) translateY(58px) rotate(-12deg) scale(.69)}
+.ig-card[data-position="2"]{z-index:3;opacity:.62;visibility:visible;transform:translateX(calc(-50% + 430px)) translateY(58px) rotate(12deg) scale(.69)}
+.ig-card-top{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:0 2px 14px;font:9px/1.4 'Courier New',monospace;letter-spacing:1.5px;color:var(--violet)}
+.ig-card-top img{width:29px;height:29px;object-fit:contain}
+.ig-media{height:360px;border-radius:15px;overflow:hidden;position:relative;background:#e4dced}
+.ig-media>img{width:100%;height:100%;object-fit:cover}
+.ig-placeholder{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:22px;padding:28px;background:radial-gradient(circle at 20% 15%,#fffaf8,#e0d5ee);color:var(--violet)}
+.ig-placeholder-number{font:italic 95px/1 Georgia,serif;color:#b86670a0}
+.ig-placeholder span:last-child{font:11px/1.8 'Courier New',monospace;letter-spacing:1px;max-width:200px}
+.ig-card:nth-child(even) .ig-placeholder{background:radial-gradient(circle at 20% 15%,#fff9f3,#e9d9e9)}
+.ig-card h3{font-size:23px;margin:12px 0 10px;letter-spacing:-.8px}
+.ig-category{font:9px/1.6 'Courier New',monospace;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin:15px 0 0}
+.ig-action{display:inline-flex;gap:15px;align-items:center;padding:10px 15px;border-radius:9px;background:var(--violet);color:white;font-size:11px}
+.ig-pending{display:block;font-size:10px;color:var(--muted);padding:8px 0}
+.ig-select{position:absolute;inset:0;background:transparent;border:0;border-radius:25px;cursor:pointer}
+.ig-select:focus-visible{outline:3px solid var(--violet);outline-offset:4px}
+.ig-controls{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:10px}
+.ig-arrow{width:45px;height:45px;border-radius:50%;border:1px solid #7061ac50;color:var(--violet);background:#ffffff80;cursor:pointer;font-size:20px}
+.ig-arrow:hover{background:var(--lavender)}.ig-arrow:focus-visible{outline:3px solid var(--violet);outline-offset:4px}
+.ig-counter{font:11px 'Courier New',monospace;color:var(--violet);min-width:50px;text-align:center}
+.ig-help{text-align:center;font-size:10px;margin:15px 20px 0}
+@media(max-width:650px){.ig-stage{min-height:565px;margin-top:0}.ig-card{width:290px;padding:15px;top:30px}.ig-media{height:310px}.ig-card h3{font-size:21px}.ig-card[data-position="-1"]{transform:translateX(calc(-50% - 155px)) translateY(27px) rotate(-8deg) scale(.8)}.ig-card[data-position="1"]{transform:translateX(calc(-50% + 155px)) translateY(27px) rotate(8deg) scale(.8)}.ig-card[data-position="-2"],.ig-card[data-position="2"]{visibility:hidden;opacity:0}.navigation nav{flex-wrap:wrap;justify-content:center;gap:12px 18px}}
+@media(prefers-reduced-motion:reduce){.ig-card{transition:none}}
