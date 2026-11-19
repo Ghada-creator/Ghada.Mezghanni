@@ -57,7 +57,7 @@
   const go = index => {
     index = Math.max(0, Math.min(photos.length - 1,index));
     const photo = photos[index];
-    const target = photo.offsetLeft - gallery.clientWidth / 2 + photo.offsetWidth / 2;
+    const target = index === 0 ? 0 : photo.offsetLeft - gallery.clientWidth / 2 + photo.offsetWidth / 2;
     gallery.scrollTo({left:target,behavior:behavior()});
   };
   const update = () => {
@@ -69,6 +69,7 @@
       const delta = Math.abs(rect.left + rect.width / 2 - center);
       if (delta < distance) {distance = delta;current = index;}
     });
+    if (gallery.scrollLeft <= 1) current = 0;
     photos.forEach((photo,index) => photo.classList.toggle('bts-current',index === current));
     count.textContent = `${current + 1} / ${photos.length}`;
     prev.disabled = current === 0; next.disabled = current === photos.length - 1;

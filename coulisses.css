@@ -1,0 +1,35 @@
+/* Première carte à gauche et images à leurs proportions naturelles. */
+.bts-gallery {
+  padding-inline-start: 18px;
+  align-items: flex-start;
+  scroll-padding-inline: 0;
+}
+.bts-gallery .bts-photo {
+  align-self: flex-start;
+}
+.bts-gallery .bts-photo:first-child {
+  scroll-snap-align: start;
+  scroll-margin-inline-start: 18px;
+}
+.bts-gallery .bts-open {
+  height: auto;
+}
+.bts-gallery .bts-photo img {
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
+.bts-gallery .bts-photo figcaption {
+  font: 14px/1.5 Arial, sans-serif;
+  color: var(--ink);
+}
+.bts-credit {
+  display: block;
+  margin-top: 8px;
+  color: var(--violet);
+  font-size: 12px;
+}
+.bts-lightbox-caption {
+  white-space: pre-line;
+  line-height: 1.5;
+}
