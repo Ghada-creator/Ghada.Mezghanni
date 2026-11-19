@@ -27,11 +27,6 @@ const instagramPosts = [
     "url": "https://www.instagram.com/p/DfHPkI5CJOq/",
     "brand": "YLA Metal"
   },
-  {
-    "url": "https://www.instagram.com/p/DfHPkI5CJOq/?hvrq=MjhreHFxZjlucTJw",
-    "brand": "YLA Metal"
-  },
-
 
   {
     "url": "https://www.instagram.com/p/DdcNmMdFBYl/?evlk=MTBpbnY2MnY2czBwYg%3D%3D",
