@@ -234,3 +234,8 @@
 .bts-scroll-count{min-width:45px;text-align:center;font:12px 'Courier New',monospace;color:var(--violet)}
 @media(max-width:650px){.bts-gallery{--photo-width:80vw;gap:18px;padding-top:25px;padding-bottom:30px}.bts-gallery .bts-open{height:390px}.bts-gallery .bts-photo{padding:10px 10px 0}.bts-photo figcaption{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.bts-gallery .bts-photo{transition:none;transform:none!important}}
+
+/* Coulisses au format des cartes Instagram. */
+.bts-gallery{--photo-width:360px;gap:26px}
+.bts-gallery .bts-open{height:400px}
+@media(max-width:650px){.bts-gallery{--photo-width:min(340px,80vw);gap:18px}.bts-gallery .bts-open{height:350px}}
