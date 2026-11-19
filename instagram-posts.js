@@ -2,11 +2,18 @@
    Exemple de forme : https://www.instagram.com/p/IDENTIFIANT/
    Remplacez les chaînes vides par vos vrais liens. */
 const instagramPosts = [
-  "",
-  "",
-  "",
-  "",
-  ""
+  "https://www.instagram.com/p/DfhZh53CHc8/?dmpr=bHZnamdkdDhzb2Zy",
+  "https://www.instagram.com/p/DfW0QvPlTTW/?evlk=MTQ4NWFzemh1NmpqNQ%3D%3D",
+  "https://www.instagram.com/p/DfHPkI5CJOq/?hvrq=MjhreHFxZjlucTJw",
+  "https://www.instagram.com/p/DePGP6kjf_B/?dmpr=dWdvZ283ZWZpdzBw",
+  "https://www.instagram.com/p/DfZfT2qRmva/?knvt=MWIxbTNvbW9iZnlrcQ%3D%3D",
+  "https://www.instagram.com/p/DdcNmMdFBYl/?evlk=MTBpbnY2MnY2czBwYg%3D%3D",
+  "https://www.instagram.com/p/DdZOLWCirYV/?dmpr=MWpna2xzbnFmaW02MQ%3D%3D",
+  "https://www.instagram.com/p/Dfj-fTclhBd/?bqrl=YjBxazd5dm1jbzM1",
+  "https://www.instagram.com/p/DfmnwCXkcqb/?bqrl=aWZkdm16Mmdzdjhy",
+  "https://www.instagram.com/p/CyVg7Y8I0im/?avpt=ZXVkbTd6c2YxZ25t",
+  "https://www.instagram.com/p/CyIjncVoXW_/?jplx=MW9wM2E5dTM1ZWhs",
+  "https://www.instagram.com/reel/DMFLIMVK4dN/?fqnt=MWthN2JyZ3Y3dTRwbQ=="
 ];
 
 (() => {
