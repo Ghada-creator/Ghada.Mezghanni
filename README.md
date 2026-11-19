@@ -1,19 +1,13 @@
-# Publications Instagram flottantes
+# Galerie Instagram avec liens uniquement
+Remplacez index.html, style.css et instagram-posts.js dans GitHub.
 
-## Installer
-Remplacez index.html et style.css. Ajoutez instagram-posts.js et le dossier posts.
-Conservez les autres fichiers, notamment badge.js, bubbles.js, logos, pict_profile.png et logo-gm.png.
+Ouvrez instagram-posts.js : au début, remplacez les chaînes vides dans instagramPosts par les liens complets de vos publications, par exemple :
 
-## Ajouter vos publications
-1. Enregistrez une capture ou une miniature de chaque publication dans posts, par exemple posts/post-01.jpg.
-2. Ouvrez instagram-posts.js et modifiez le tableau instagramPosts au début du fichier :
+const instagramPosts = [
+  "https://www.instagram.com/p/IDENTIFIANT_REEL_A_REMPLACER/",
+  "https://www.instagram.com/reel/AUTRE_IDENTIFIANT_A_REMPLACER/"
+];
 
-```javascript
-{ title: "Titre de la publication", category: "Social media", image: "posts/post-01.jpg", url: "https://www.instagram.com/p/VOTRE_IDENTIFIANT/", alt: "Description de votre image" }
-```
-
-3. Remplacez les cinq exemples par vos publications réelles ; vous pouvez en ajouter ou supprimer.
-4. Téléversez les images et le fichier modifié dans GitHub.
-
-La galerie montre des emplacements explicitement indiqués en attendant vos contenus ; aucun travail ou résultat n’est inventé. Les images ne sont pas récupérées automatiquement depuis Instagram. Les liens ouvrent les posts dans un nouvel onglet.
-La carte centrale est mise en avant ; les flèches ou un clic sur une carte latérale permettent de naviguer. Aucun défilement automatique. Compatible avec la réduction des animations.
+Ces URLs sont des exemples de structure, à remplacer par vos vrais liens.
+Aucune image ni capture n’est nécessaire. Les cartes chargent les publications intégrées directement depuis Instagram. Les autres éléments du site sont conservés.
+Les posts doivent être publics et leur intégration autorisée ; Instagram ou les réglages du navigateur peuvent empêcher l’affichage. Le bouton View on Instagram reste disponible pour ouvrir le post directement.

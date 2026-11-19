@@ -1,14 +1,12 @@
-/* À COMPLÉTER : un objet par publication.
-   image : chemin de votre capture (ex. "posts/post-01.jpg").
-   url : lien Instagram complet du post ou du reel.
-   Ne laissez pas image vide après avoir ajouté une véritable publication.
-   Les emplacements vides servent uniquement à préparer la galerie. */
+/* Collez uniquement les liens de vos posts ou reels, entre guillemets.
+   Exemple de forme : https://www.instagram.com/p/IDENTIFIANT/
+   Remplacez les chaînes vides par vos vrais liens. */
 const instagramPosts = [
-  { title: "Your first publication", category: "Preview · to be added", image: "", url: "", alt: "" },
-  { title: "Your second publication", category: "Preview · to be added", image: "", url: "", alt: "" },
-  { title: "Your third publication", category: "Preview · to be added", image: "", url: "", alt: "" },
-  { title: "Your fourth publication", category: "Preview · to be added", image: "", url: "", alt: "" },
-  { title: "Your fifth publication", category: "Preview · to be added", image: "", url: "", alt: "" }
+  "",
+  "",
+  "",
+  "",
+  ""
 ];
 
 (() => {
@@ -30,7 +28,15 @@ const instagramPosts = [
       return url.protocol === 'https:' && ['instagram.com','www.instagram.com'].includes(url.hostname) ? url.href : null;
     } catch { return null; }
   };
-  const cards = instagramPosts.map((post, index) => {
+  const cards = instagramPosts.map((rawUrl, index) => {
+    const validUrl = instagramUrl(rawUrl);
+    let permalink = null;
+    if (validUrl) {
+      const parsed = new URL(validUrl);
+      const match = parsed.pathname.match(/^\/(p|reel|tv)\/([A-Za-z0-9_-]+)\/?$/);
+      if (match) permalink = 'https://www.instagram.com/' + match[1] + '/' + match[2] + '/';
+    }
+    const post = {title: 'Instagram publication ' + (index + 1), category: permalink ? 'Instagram / Ghada’s work' : 'Link to be added', url: permalink || ''};
     const card = make('article', 'ig-card');
     card.setAttribute('role', 'group');
     card.setAttribute('aria-roledescription', 'slide');
@@ -42,18 +48,23 @@ const instagramPosts = [
     const placeholder = () => {
       media.replaceChildren();
       const empty = make('div', 'ig-placeholder');
-      empty.append(make('span', 'ig-placeholder-number', String(index + 1).padStart(2,'0')), make('span', '', 'YOUR INSTAGRAM PUBLICATION HERE'));
+      empty.append(make('span', 'ig-placeholder-number', String(index + 1).padStart(2,'0')), make('span', '', 'ADD YOUR INSTAGRAM LINK'));
       media.append(empty);
     };
-    if (post.image) {
-      const image = make('img'); image.src = post.image; image.alt = post.alt || post.title;
-      image.addEventListener('error', placeholder, {once:true}); media.append(image);
+    if (permalink) {
+      const frame = make('iframe', 'ig-embed');
+      frame.src = permalink + 'embed/';
+      frame.title = 'Instagram publication ' + (index + 1);
+      frame.loading = 'lazy';
+      frame.setAttribute('allowfullscreen', '');
+      frame.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+      media.append(frame);
     } else placeholder();
     card.append(top, media, make('p', 'ig-category', post.category), make('h3', '', post.title));
     const url = instagramUrl(post.url);
     if (url) {
       const link = make('a', 'ig-action', 'View on Instagram ↗'); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer'; card.append(link);
-    } else card.append(make('span', 'ig-pending', 'Image and Instagram link to be added'));
+    } else card.append(make('span', 'ig-pending', 'Instagram link to be added'));
     const select = make('button', 'ig-select'); select.type = 'button'; select.setAttribute('aria-label', 'Select ' + post.title);
     select.addEventListener('click', () => { active = index; render(); });
     card.append(select); stage.append(card);
