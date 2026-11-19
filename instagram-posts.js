@@ -4,53 +4,52 @@
    Ne modifiez pas les liens si vous souhaitez conserver cet ordre. */
 const instagramPosts = [
   {
-    "url": "https://www.instagram.com/p/DfZfT2qRmva/?knvt=MWIxbTNvbW9iZnlrcQ%3D%3D",
-    "brand": "Dawlati UAE"
+    "url": "https://www.instagram.com/p/DfhZh53CHc8/",
+    "brand": ""
   },
   {
-    "url": "https://www.instagram.com/reels/DMFOfTcSWWp",
-    "brand": "Give Way for Emergency Vehicles, Immediately"
-  },
-  {
-    "url": "https://www.instagram.com/p/DePGP6kjf_B/?dmpr=dWdvZ283ZWZpdzBw",
-    "brand": "Dawlati UAE"
-  },
-  {
-    "url": "https://www.instagram.com/p/DfhZh53CHc8/?dmpr=bHZnamdkdDhzb2Zy",
-    "brand": "YLA Metal"
-  },
-  {
-    "url": "https://www.instagram.com/p/DfW0QvPlTTW/?evlk=MTQ4NWFzemh1NmpqNQ%3D%3D",
-    "brand": "YLA Metal"
+    "url": "https://www.instagram.com/p/DfW0QvPlTTW/",
+    "brand": ""
   },
   {
     "url": "https://www.instagram.com/p/DfHPkI5CJOq/",
-    "brand": "YLA Metal"
-  },
-
-  {
-    "url": "https://www.instagram.com/p/DdcNmMdFBYl/?evlk=MTBpbnY2MnY2czBwYg%3D%3D",
-    "brand": "JOUBIJOUX"
+    "brand": ""
   },
   {
-    "url": "https://www.instagram.com/p/DdZOLWCirYV/?dmpr=MWpna2xzbnFmaW02MQ%3D%3D",
-    "brand": "JOUBIJOUX"
+    "url": "https://www.instagram.com/p/DePGP6kjf_B/",
+    "brand": ""
   },
   {
-    "url": "https://www.instagram.com/p/DfmnwCXkcqb/?bqrl=aWZkdm16Mmdzdjhy",
-    "brand": "Ember Automotive"
+    "url": "https://www.instagram.com/p/DfZfT2qRmva/",
+    "brand": ""
   },
   {
-    "url": "https://www.instagram.com/p/Dfj-fTclhBd/?bqrl=YjBxazd5dm1jbzM1",
-    "brand": "Ember Automotive"
+    "url": "https://www.instagram.com/p/DdcNmMdFBYl/",
+    "brand": ""
   },
   {
-    "url": "https://www.instagram.com/p/CyVg7Y8I0im/?avpt=ZXVkbTd6c2YxZ25t",
-    "brand": "Al wow tunisia"
+    "url": "https://www.instagram.com/p/DdZOLWCirYV/",
+    "brand": ""
   },
   {
-    "url": "https://www.instagram.com/p/CyIjncVoXW_/?jplx=MW9wM2E5dTM1ZWhs",
-    "brand": "Al wow tunisia"
+    "url": "https://www.instagram.com/p/Dfj-fTclhBd/",
+    "brand": ""
+  },
+  {
+    "url": "https://www.instagram.com/p/DfmnwCXkcqb/",
+    "brand": ""
+  },
+  {
+    "url": "https://www.instagram.com/p/CyVg7Y8I0im/",
+    "brand": ""
+  },
+  {
+    "url": "https://www.instagram.com/p/CyIjncVoXW_/",
+    "brand": ""
+  },
+  {
+    "url": "https://www.instagram.com/reel/DMFLIMVK4dN/",
+    "brand": ""
   }
 ];
 

@@ -1,13 +1,10 @@
-# Galerie Instagram avec liens uniquement
-Remplacez index.html, style.css et instagram-posts.js dans GitHub.
+# Photos de coulisses
 
-Ouvrez instagram-posts.js : au début, remplacez les chaînes vides dans instagramPosts par les liens complets de vos publications, par exemple :
+Remplacez index.html et style.css. Ajoutez coulisses.js et le dossier coulisses avec ses sept photos.
+Les fichiers de la galerie Instagram avec les 12 liens sont inclus. Conservez votre instagram-posts.js si vous avez déjà renseigné les marques.
+Tous les autres fichiers du site sont inclus.
 
-const instagramPosts = [
-  "https://www.instagram.com/p/IDENTIFIANT_REEL_A_REMPLACER/",
-  "https://www.instagram.com/reel/AUTRE_IDENTIFIANT_A_REMPLACER/"
-];
+La section est placée après Instagram. Une grande photo et six photos plus petites composent le journal de tournage. Les cadres se redressent au survol. Au clic, les photos s’ouvrent en entier dans une fenêtre avec navigation, fermeture et touches Échap, flèche gauche et flèche droite.
+Les originaux sont conservés. Les miniatures sont cadrées par CSS ; l’ouverture au clic affiche l’image complète.
 
-Ces URLs sont des exemples de structure, à remplacer par vos vrais liens.
-Aucune image ni capture n’est nécessaire. Les cartes chargent les publications intégrées directement depuis Instagram. Les autres éléments du site sont conservés.
-Les posts doivent être publics et leur intégration autorisée ; Instagram ou les réglages du navigateur peuvent empêcher l’affichage. Le bouton View on Instagram reste disponible pour ouvrir le post directement.
+Pour modifier vos textes, cherchez « Texte à ajouter » dans index.html : une occurrence pour le titre et une légende par photo. Aucune description de projet n’a été inventée.
