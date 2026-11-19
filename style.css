@@ -219,3 +219,18 @@
 @media(max-width:900px){.bts-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}.bts-featured{grid-column:span 2;grid-row:auto}.bts-featured img{height:auto;aspect-ratio:4/3}.bts-photo:not(.bts-featured) img{height:280px}}
 @media(max-width:550px){.bts-gallery{gap:24px;padding-inline:4px;grid-template-columns:1fr}.bts-featured{grid-column:auto}.bts-photo:not(.bts-featured) img{height:auto;max-height:460px;object-fit:contain}.bts-photo img{background:#e4dced}.bts-lightbox{padding:12px}.bts-lightbox-view{position:relative;padding-bottom:52px}.bts-large{max-width:100%;max-height:68dvh}.bts-previous,.bts-next{position:absolute;bottom:0}.bts-previous{left:calc(50% - 50px)}.bts-next{right:calc(50% - 50px)}}
 @media(prefers-reduced-motion:reduce){.bts-photo{transition:none}.bts-photo:hover,.bts-photo:focus-within{transform:none}}
+
+/* Coulisses flottantes : toutes les photos restent entières. */
+.bts-gallery{--photo-width:clamp(280px,58vw,660px);display:flex;position:relative;align-items:center;gap:30px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:calc((100% - var(--photo-width))/2);padding:40px max(18px,calc((100% - var(--photo-width))/2)) 45px;margin:0;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#b9a9d4 transparent;-webkit-overflow-scrolling:touch}
+.bts-gallery:focus-visible{outline:2px solid var(--violet);outline-offset:4px;border-radius:14px}
+.bts-gallery .bts-photo{flex:0 0 var(--photo-width);width:var(--photo-width);min-width:0;grid-column:auto;grid-row:auto;align-self:center;scroll-snap-align:center;transform:rotate(-2deg) scale(.95);transition:transform .4s,box-shadow .4s;box-shadow:0 18px 40px #51406b20}
+.bts-gallery .bts-photo:nth-child(even){transform:rotate(2deg) scale(.95)}
+.bts-gallery .bts-photo.bts-current,.bts-gallery .bts-photo:hover,.bts-gallery .bts-photo:focus-within{transform:rotate(0) scale(1);box-shadow:0 22px 48px #51406b29}
+.bts-gallery .bts-open{display:flex;align-items:center;justify-content:center;background:transparent;height:480px}
+.bts-gallery .bts-photo img,.bts-gallery .bts-featured img,.bts-gallery .bts-photo:not(.bts-featured) img{display:block;width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center;background:transparent}
+.bts-scroll-controls{display:flex;align-items:center;justify-content:center;gap:24px;margin:18px 0 0}
+.bts-scroll-controls button{width:44px;height:44px;border:1px solid #7061ac50;border-radius:50%;background:#ffffff90;color:var(--violet);font-size:20px;cursor:pointer}
+.bts-scroll-controls button:hover{background:var(--lavender)}.bts-scroll-controls button:disabled{opacity:.35;cursor:default}.bts-scroll-controls button:focus-visible{outline:3px solid var(--violet);outline-offset:4px}
+.bts-scroll-count{min-width:45px;text-align:center;font:12px 'Courier New',monospace;color:var(--violet)}
+@media(max-width:650px){.bts-gallery{--photo-width:80vw;gap:18px;padding-top:25px;padding-bottom:30px}.bts-gallery .bts-open{height:390px}.bts-gallery .bts-photo{padding:10px 10px 0}.bts-photo figcaption{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.bts-gallery .bts-photo{transition:none;transform:none!important}}
